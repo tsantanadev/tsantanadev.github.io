@@ -1,5 +1,5 @@
 ---
-title: Understanding Kubernetes CPU Units
+# title: Understanding Kubernetes CPU Units
 author: thiago
 date: 2024-10-04 16:00:00 -0300
 categories: [Devops, Kubernetes]
@@ -70,7 +70,11 @@ The diagram below illustrates this concept:
 
 ## Conclusion
 
-In Kubernetes, CPU resources are measured in **millicores**, where **1000m** equals 1 full CPU (or 1 vCPU in cloud environments). A container's CPU usage is thus a fraction of a full CPU core, allowing for highly flexible and granular control of resource allocation. Understanding these terms will help you optimize your containerized applications and make better decisions when setting resource limits.
+In Kubernetes, CPU resources are measured in millicores, where 1000m equals 1 full CPU core (or 1 vCPU in cloud environments). CPU limits dictate how much processing time a container can use within a 100ms cycle. For instance, a container with 1000m can use 100% of a CPU core during that cycle, while a container with 500m will only use 50ms of CPU time out of the 100ms cycle.
+
+When a container's CPU limit exceeds 1000m (such as 1500m), Kubernetes will allocate full usage of one CPU core and distribute the excess (e.g., 50%) to another core, allowing the container to leverage multiple CPU cores for more processing power.
+
+By understanding and correctly configuring CPU requests and limits, you can ensure your applications run efficiently while making optimal use of available resources. This helps prevent over-utilization or under-utilization of CPU resources, improving performance and cost management in your Kubernetes environment.
 
 ---
 
