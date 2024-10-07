@@ -25,9 +25,9 @@ Kubernetes measures CPU resources in terms of **CPU cores**. For each container,
 
 ### The Concept of "Microcores" (millicores)
 
-Kubernetes uses **millicores** (represented by `m`) to manage fractional CPU units. This is extremely useful when dividing CPU resources across multiple containers. 
+Kubernetes uses **millicores** (represented by `m`) to manage fractional CPU units. This is extremely useful when dividing CPU resources across multiple containers.
 
-1 CPU core is equivalent to 1000 millicores (`1000m`).  
+1 CPU core is equivalent to 1000 millicores (`1000m`).
 Thus, 1 millicore (`1m`) represents 1/1000th of a CPU core.
 
 For example:
@@ -80,4 +80,18 @@ By understanding and correctly configuring CPU requests and limits, you can ensu
 
 Thanks for reading! If you have any questions or suggestions, feel free to reach out.
 
-
+<script src="https://giscus.app/client.js"
+        data-repo="tsantanadev/tsantanadev.github.io"
+        data-repo-id="R_kgDOM7mJ1w"
+        data-category="General"
+        data-category-id="DIC_kwDOM7mJ184CjI33"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
